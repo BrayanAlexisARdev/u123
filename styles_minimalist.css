@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E0F7FA; /* Fondo celeste claro */
+    color: #333;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #0277BD; /* Azul más oscuro */
+    text-align: center;
+}
+
+h2 {
+    color: #0288D1; /* Azul intermedio */
+    margin-bottom: 10px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4FC3F7; /* Azul claro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px; /* Añadido para separar el botón del texto */
+}
+
+button:hover {
+    background-color: #29B6F6; /* Azul claro más oscuro al pasar el mouse */
+}
+
+.result {
+    font-weight: bold;
+    color: #388E3C; /* Verde oscuro para "Correcto" */
+    margin-left: 10px; /* Añadido para que el texto no quede pegado al botón */
+    display: inline-block; /* Para asegurar que el texto aparezca en la misma línea */
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
