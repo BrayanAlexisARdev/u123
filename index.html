@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="styles_minimalist.css">
 </head>
 <body>
-    <h1 id="principal">Quiz de Sistemas Operativos</h1>
-    <a href="#u1" style="text-decoration:none;"><h1> > Unidad 1 - </h1></a>
-	<a href="#u2" style="text-decoration:none;"><h1> > Unidad 2 - </h1></a>
-	<a href="#u3" style="text-decoration:none;"><h1> > Unidad 3 -  </h1></a>
+    <h1 id="principal">QUIZ BD ASO</h1>
+    <a href="#u1" style="text-decoration:none;"><h1> > Preguntas BD- </h1></a>
+	<a href="#u2" style="text-decoration:none;"><h1> > Preguntas ASO - </h1></a>
 	<!-- 
 	-- Pregunta 1 --
     <h2>XXX</h2>
@@ -23,145 +22,213 @@
         <span id="result3a" class="result"></span>
     </form>
 	-->
-	<h2 id="u1">Unidad 1</h2><a href="#principal" style="text-decoration:none;">VOLVER</a>
+	<h2 id="u1">Preguntas BD</h2><a href="#principal" style="text-decoration:none;">VOLVER</a>
     <!-- Pregunta 1 -->
-    <h2>¿Qué es un sistema operativo?</h2>
+    <h2>De las siguientes consultas, marque cual considera que es una DDL</h2>
     <form id="quizForm1">
-        <input type="radio" name="q" value="a" required> X a) Un programa que controla la ejecución de aplicaciones y programas, y que actúa como interfaz entre las aplicaciones y el hardware de la computadora.<br>
-        <input type="radio" name="q" value="b"> b) Un programa o aplicación para atender los pedidos de atención a través del sistema de interrupciones.<br>
-        <input type="radio" name="q" value="c"> c) Una aplicación que reside permanentemente en memoria principal.<br>
-        <input type="radio" name="q" value="d"> d) Un programa desarrollado por el fabricante de computadoras para controlar el acceso a la misma.<br>
-        <button type="button" onclick="checkAnswer('quizForm1', 'q', 'a', 'result1')">Verificar respuesta</button>
+        <input type="radio" name="q" value="a" required> a) SELECT * FROM Personas.<br>
+        <input type="radio" name="q" value="b"> +b) CREATE TABLE Clientes (idClientes int, Apellido varchar(250)).<br>
+        <input type="radio" name="q" value="c"> c) UPDATE Usuarios set Email = @pEmail.<br>
+        <button type="button" onclick="checkAnswer('quizForm1', 'q', 'b', 'result1')">Verificar respuesta</button>
         <span id="result1" class="result"></span>
     </form>
 
     <!-- Pregunta 2 -->
-    <h2>¿Qué es un ciclo de instrucción?</h2>
+    <h2>Que podemos decir acerca del resultado del siguiente SQL:</h2>
     <form id="quizForm2">
-        <input type="radio" name="q" value="a" required> X a) Es el proceso de búsqueda y ejecución de las instrucciones en memoria, llevado a cabo por la CPU, durante la ejecución de un programa.<br>
-        <input type="radio" name="q" value="b"> b) Es la forma en que se particiona un programa cuando se carga en memoria.<br>
-        <input type="radio" name="q" value="c"> c) Es el proceso que se lleva a cabo cuando ocurre un pedido de interrupción.<br>
-        <input type="radio" name="q" value="d"> d) Es el ciclo que se lleva acabo cuando un proceso cambia de estados.<br>
-        <button type="button" onclick="checkAnswer('quizForm2', 'q', 'a', 'result2')">Verificar respuesta</button>
+        <p>Que podemos decir acerca del resultado del siguiente SQL:<br><br>SELECT Clientes.CodCliente, Clientes.Nombre, Compra.Fecha <br>FROM Compra <br>LEFT JOIN Clientes ON Clientes.CodCliente = Compra.CodCliente<br><br></p>
+        <input type="radio" name="q" value="a" required> a) Devolverá tantas lineas como registros haya en las 2 tablas juntas.<br>
+        <input type="radio" name="q" value="b"> b) Devolverá todos los clientes, tengan o no compras asociadas.<br>
+        <input type="radio" name="q" value="c"> +c) Devolverá tantas lineas como registros haya en la tabla de compras.<br>
+        <input type="radio" name="q" value="d"> d) Todas las opciones son correctas.<br>
+        <input type="radio" name="q" value="e"> e) Devolverá tantas lineas como registros haya en la tabla de clientes.<br>
+        <button type="button" onclick="checkAnswer('quizForm2', 'q', 'c', 'result2')">Verificar respuesta</button>
         <span id="result2" class="result"></span>
     </form>
 	
 	<!-- Pregunta 3 -->
-    <h2>¿Qué es la API de un sistema operativo? (Application Program Interface)</h2>
+    <h2>Los modelos de datos son:</h2>
     <form id="quizForm3">
-        <input type="radio" name="q" value="a" required> a) Es el nombre que recibe una aplicación de usuario en sistemas con múltiples programas<br>
-        <input type="radio" name="q" value="b"> X b) Es un conjunto de funciones y/o bibliotecas que el SO ofrece a los desarrolladores para hacer llamadas al sistema (system calls).<br>
-        <input type="radio" name="q" value="c"> c) Es el nombre que recibe una aplicación para atender solicitudes de eventos externos a través de interrupciones.<br>
-        <input type="radio" name="q" value="d"> d) Es nombre que reciben las aplicaciones que sirven para comunicar procesos.<br>
-        <button type="button" onclick="checkAnswer('quizForm3', 'q', 'b', 'result3')">Verificar respuesta</button>
+        <input type="radio" name="q" value="a" required> a) Son una representación en una base de datos de un modelo conceptual.<br>
+        <input type="radio" name="q" value="b"> b) Una colección de herramientas para poder representar las relaciones entre varias tablas.<br>
+        <input type="radio" name="q" value="c"> +c) Una colección de herramientas conceptuales para describir los datos, las relaciones, la semántica y las restricciones de consistencia.<br>
+        <button type="button" onclick="checkAnswer('quizForm3', 'q', 'c', 'result3')">Verificar respuesta</button>
         <span id="result3" class="result"></span>
     </form>
 
 	<!-- Pregunta 4 -->
-    <h2>¿Qué es un sistema de tiempo compartido?</h2>
+    <h2>La definición de DATO es</h2>
     <form id="quizForm4">
-        <input type="radio" name="q" value="a" required> a) Un sistema de procesamiento por lotes.<br>
-        <input type="radio" name="q" value="b"> b) Un sistema para dar soporte al tratamiento de interrupciones periódicas.<br>
-        <input type="radio" name="q" value="c"> X c) Un sistema donde cada proceso dispone de una pequeña rodaja de tiempo (time slice) periódica para hacer uso de la CPU.<br>
-        <input type="radio" name="q" value="d"> d) Un sistema que permite procesamiento distribuido.<br>
-        <button type="button" onclick="checkAnswer('quizForm4', 'q', 'c', 'result4')">Verificar respuesta</button>
+        <input type="radio" name="q" value="a" required> a) Un valor en una tabla.<br>
+        <input type="radio" name="q" value="b"> +b) Representación de hechos, conceptos, o instrucciones a la que se le asigna un significado.<br>
+        <input type="radio" name="q" value="c"> c) Representación de información.<br>
+        <button type="button" onclick="checkAnswer('quizForm4', 'q', 'b', 'result4')">Verificar respuesta</button>
         <span id="result4" class="result"></span>
     </form>
 	
 	<!-- Pregunta 5 -->
-    <h2>¿Qué es un sistema de tiempo real?</h2>
+    <h2>En Nivel fisico de abstracción.</h2>
     <form id="quizForm5">
-        <input type="radio" name="q" value="a" required> a) Un sistema de procesamiento por lotes.<br>
-        <input type="radio" name="q" value="b"> X b) Un sistema diseñado para cumplir tareas que deben completarse en un plazo prefijado.<br>
-        <input type="radio" name="q" value="c"> c) Un sistema que atiende los pedidos de interrupción en el momento que se solicitan.<br>
-        <input type="radio" name="q" value="d"> d) Un sistema exclusivo para aplicaciones distribuidas.<br>
-        <button type="button" onclick="checkAnswer('quizForm5', 'q', 'b', 'result5')">Verificar respuesta</button>
+        <input type="radio" name="q" value="a" required> +a) Describe como se almacenan realmente los datos.<br>
+        <input type="radio" name="q" value="b"> b) Describe que usuario puede acceder a una consulta SQL.<br>
+        <input type="radio" name="q" value="c"> c) Describe que datos se almacenan en la base de datos y que relaciones existen.<br>
+        <input type="radio" name="q" value="d"> d) Describe solo parte de la base de datos.<br>
+        <button type="button" onclick="checkAnswer('quizForm5', 'q', 'a', 'result5')">Verificar respuesta</button>
         <span id="result5" class="result"></span>
     </form>
+
+    <!-- Pregunta 6 -->
+    <h2>El lenguaje SQL esta compuesta por:</h2>
+    <form id="quizForm6">
+        <input type="radio" name="q" value="a" required> +a) El lenguaje SQL, esta compuesto por DML, DDL Y SPL.<br>
+        <input type="radio" name="q" value="b"> b) El lenguaje SQL, esta compuesto por SQL ANSI.<br>
+        <input type="radio" name="q" value="c"> c) El lenguaje SQL, esta compuesto por DML y consultas.<br>
+        <input type="radio" name="q" value="d"> d) El lenguaje SQL, esta compuesto por DML, DDL.<br>
+        <button type="button" onclick="checkAnswer('quizForm6', 'q', 'a', 'result6')">Verificar respuesta</button>
+        <span id="result6" class="result"></span>
+    </form>
+
+    <!-- Pregunta 7 -->
+    <h2>Seleccionar el DLR que sea correcta según el siguiente DER.</h2>
+    <form id="quizForm7">
+        <img src="./preg7.jpg" width="300px"/><br>
+        <p>Seleccionar el DLR que sea correcta según el siguiente DER.</p>
+        <p>Seleccione una:</p>
+        <input type="radio" name="q" value="a" required> a)<br>
+        <img src="./preg7-A.jpg" width="300px"/><br>
+        <input type="radio" name="q" value="b"> b)<br>
+        <img src="./preg7-B.jpg" width="200px"/><br>
+        <input type="radio" name="q" value="c"> +c)<br>
+        <img src="./preg7-C.jpg" width="200px"/><br>
+        <input type="radio" name="q" value="d"> d)<br>
+        <img src="./preg7-D.jpg" width="200px"/><br>
+        <button type="button" onclick="checkAnswer('quizForm7', 'q', 'c', 'result7')">Verificar respuesta</button>
+        <span id="result7" class="result"></span>
+    </form>
+
+    <!-- Pregunta 8 -->
+    <h2>Dadas las siguientes tablas y el enunciado:</h2>
+    <form id="quizForm8">
+        <img src="./preg8.jpg" width="300px"/><br>
+        <p>Dadas las siguientes tablas y el enunciado:<br>Listar el codigo del cliente, nombre del cliente y el nombre de la provincia de aquellos clientes que se encuentran en una provincia que su nombre comienze con M.</p>
+        <p>Seleccione una:</p>
+        <input type="radio" name="q" value="a" required> a)<br><br>SELECT Clientes.codcliente,Clientes.nombre,descripcion<br>FROM Clientes<br>WHERE Provincias.descripcion like 'M%'<br><br>
+        <input type="radio" name="q" value="b" required> b)<br><br>SELECT Clientes.codcliente,Clientes.nombre,Provincias.descripcion<br>FROM Clientes<br>INNER JOIN Provincias ON Clientes.Cod_provincia=Provincias.Cod_Provincia<br>WHERE Provincias.descripcion = 'M%'<br><br>
+        <input type="radio" name="q" value="c" required> c)<br><br>SELECT Clientes.codcliente,Clientes.nombre,Provincias.descripcion<br>FROM Clientes<br>INNER JOIN Provincias ON Clientes.Cod_provincia=Provincias.Cod_Provincia<br>WHERE Provincias.descripcion like '%M%'<br><br>
+        <input type="radio" name="q" value="d" required> d)<br><br>SELECT Clientes.codcliente,Clientes.nombre,Provincias.nombre<br>FROM Clientes<br>INNER JOIN Provincias ON Clientes.Cod_provincia=Provincias.Cod_Provincia<br>WHERE Provincias.descripcion like 'M%'<br><br>
+        <input type="radio" name="q" value="e" required> +e)<br><br>SELECT Clientes.codcliente,Clientes.nombre,Provincias.descripcion<br>FROM Clientes<br>INNER JOIN Provincias ON Clientes.Cod_provincia=Provincias.Cod_Provincia<br>WHERE Provincias.descripcion like 'M%'<br><br>
+        <button type="button" onclick="checkAnswer('quizForm8', 'q', 'e', 'result8')">Verificar respuesta</button>
+        <span id="result8" class="result"></span>
+    </form>
 	
-	<h2 id="u2">Unidad 2</h2><a href="#principal">VOLVER</a>
+    <!-- Pregunta 9 -->
+    <h2>El DER es un diagrama compuesto por:</h2>
+    <form id="quizForm9">
+        <input type="radio" name="q" value="a" required> a) Entidades, tablas, relaciones, herencia y cardinalidad.<br>
+        <input type="radio" name="q" value="b"> +b) Entidades, relaciones y su cardinalidad.<br>
+        <input type="radio" name="q" value="c"> c) Claves foraneas, indices, disparadores, procedimientos.<br>
+        <input type="radio" name="q" value="d"> d) Tablas, relaciones y su cardinalidad.<br>
+        <input type="radio" name="q" value="e"> e) Tablas, campos, columnas, claves primarias.<br>
+        <button type="button" onclick="checkAnswer('quizForm9', 'q', 'b', 'result9')">Verificar respuesta</button>
+        <span id="result9" class="result"></span>
+    </form>
+
+    <!-- Pregunta 10 -->
+    <h2>Una Primary Key es.....</h2>
+    <form id="quizForm10">
+        <input type="radio" name="q" value="a" required> a) Es un campo que debe ser incremental de 1 en 1.<br>
+        <input type="radio" name="q" value="b"> b) Es un campo que siempre debe ser INT.<br>
+        <input type="radio" name="q" value="c"> +c) Un campo o más de uno, que identifican a la tabla y no puede repetirse.<br>
+        <input type="radio" name="q" value="d"> d) Un campo que permite la duplicacion de los registros mas importantes dentro de una tabla.<br>
+        <input type="radio" name="q" value="e"> e) Es un campo siempre alfanumérico cuyo valor no puede repetirse.<br>
+        <button type="button" onclick="checkAnswer('quizForm10', 'q', 'c', 'result10')">Verificar respuesta</button>
+        <span id="result10" class="result"></span>
+    </form>
+
+	<h2 id="u2">Preguntas ASO</h2><a href="#principal">VOLVER</a>
 	
 	<!-- Pregunta 1 -->
-    <h2>¿Qué función cumple el planificador del corto plazo?</h2>
+    <h2>¿Cual es la idea fundamental de una maquina virtual?</h2>
     <form id="quizForm1a">
-        <input type="radio" name="q" value="a" required> a) Es el nivel de planificación donde se determina qué programas se admiten en el sistema para su procesamiento, suministrando procesos a la cola de preparados.<br>
-        <input type="radio" name="q" value="b"> X b) Es el nivel de planificación que asigna y desasigna los procesos a la CPU<br>
-        <input type="radio" name="q" value="c"> c) Es el nivel de planificación donde se envían al disco procesos bloqueados, para liberar la memoria principal a los otros procesos (swapping)<br>
-        <input type="radio" name="q" value="d"> d) Es el nivel de planificación donde se crea el PCB (Process Control Block)<br>
+        <input type="radio" name="q" value="a" required> a) Acelerar el uso del hardware propio de una computadora.<br>
+        <input type="radio" name="q" value="b"> +b) Abstraer el hardware de una computadora, formando diferentes entornos de ejecucion, dando la sensacion de que cada entorno tiene su propio hardware.<br>
+        <input type="radio" name="q" value="c"> c) Ninguna de las otras respuestas es la correcta.<br>
+        <input type="radio" name="q" value="d"> d) Aumentar el rendimiento de una computadora<br>
         <button type="button" onclick="checkAnswer('quizForm1a', 'q', 'b', 'result1a')">Verificar respuesta</button>
         <span id="result1a" class="result"></span>
     </form>	
 	
 	<!-- Pregunta 2 -->
-    <h2>¿Qué función cumple el planificador del largo plazo?</h2>
+    <h2>Los contenedores de software son:</h2>
     <form id="quizForm2a">
-        <input type="radio" name="q" value="a" required> X a) Es el nivel de planificación donde se determina qué programas se admiten en el sistema para su procesamiento, suministrando procesos a la cola de preparados.<br>
-        <input type="radio" name="q" value="b"> b) Es el nivel de planificación que asigna y desasigna los procesos a la CPU.<br>
-        <input type="radio" name="q" value="c"> c) Es el nivel de planificación donde se envían al disco procesos bloqueados, para liberar la memoria principal a los otros procesos (swapping).<br>
-        <input type="radio" name="q" value="d"> d) Es el nivel de planificación donde se atienden las solicitudes de interrupciones.<br>
-        <button type="button" onclick="checkAnswer('quizForm2a', 'q', 'a', 'result2a')">Verificar respuesta</button>
+        <input type="radio" name="q" value="a" required> a) Ninguna de las respuestas es correctas.<br>
+        <input type="radio" name="q" value="b"> b) Se utilizan para garantizar que una determinada aplicación se ejecute correctamente cuando cambie su entorno sin dar fallos de ningún tipo.<br>
+        <input type="radio" name="q" value="c"> c) Un paquete de elementos que permiten ejecutar una aplicación determinada en cualquier sistema operativo.<br>
+        <input type="radio" name="q" value="d"> d) El contenedor actúa como una funda para el software que lo habilita para funcionar dentro del nuevo entorno.<br>
+        <input type="radio" name="q" value="e"> +e) Todas las respuestas son correctas.<br>
+        <button type="button" onclick="checkAnswer('quizForm2a', 'q', 'e', 'result2a')">Verificar respuesta</button>
         <span id="result2a" class="result"></span>
     </form>	
 	
 	<!-- Pregunta 3 -->
-    <h2>¿Desde qué estado se puede finalizar o terminar un proceso en forma normal?</h2>
+    <h2>¿Cual de las siguientes definiciones describe mejor a una API (Application Programming Interface)?</h2>
     <form id="quizForm3a">
-        <input type="radio" name="q" value="a" required> a) Solo si el proceso está suspendido (en memoria secundaria).<br>
-        <input type="radio" name="q" value="b"> X b) En estado de ejecución.<br>
-        <input type="radio" name="q" value="c"> c) Cuando el SO lo decida.<br>
-        <input type="radio" name="q" value="d"> d) Solo desde el estado listo (ready)<br>
-        <button type="button" onclick="checkAnswer('quizForm3a', 'q', 'b', 'result3a')">Verificar respuesta</button>
+        <input type="radio" name="q" value="a" required> a) Son un servicio de un dispositivo a otro; que se comunican a través de internet y están optimizadas para la comunicación de máquina a máquina.<br>
+        <input type="radio" name="q" value="b"> b) Una API es cualquier pieza de software que se ofrece para la comunicación WEB a través de Internet y estandariza su comunicación a través de la codificación y protocolos estrictamente definidos.<br>
+        <input type="radio" name="q" value="c"> +c) Una API especifica como los componentes de software deben interactuar entre sí utilizando protocolos y funciones como intermediarios.<br>
+        <input type="radio" name="q" value="d"> d) Una API se utiliza para comunicar 2 sistemas a través de una red, con HTTP como el medio de conectividad entre ellos y utilizando mensajes XML para realizar las solicitudes y respuestas.<br>
+        <button type="button" onclick="checkAnswer('quizForm3a', 'q', 'c', 'result3a')">Verificar respuesta</button>
         <span id="result3a" class="result"></span>
     </form>	
 	
 	<!-- Pregunta 4 -->
-    <h2>¿Qué es un hilo o hebra (thread)?</h2>
+    <h2>Cuando se utiliza una máquina virtual, el software operativo instalado en la computadora real con el que se arranca...</h2>
     <form id="quizForm4a">
-        <input type="radio" name="q" value="a" required> X a) Es la unidad básica de utilización de la CPU; que tiene su identificador de subproceso, un contador de programa, un conjunto de registro y una pila.<br>
-        <input type="radio" name="q" value="b"> b) Es la unidad básica de utilización de la CPU; que comparte con otro proceso su identificador de subproceso, el contador de programa, y la pila.<br>
-        <input type="radio" name="q" value="c"> c) Es un proceso que siempre ocupa la CPU.<br>
-        <input type="radio" name="q" value="d"> d) Es un proceso que determina que el proceso padre puede hacer solo una tarea.<br>
-        <button type="button" onclick="checkAnswer('quizForm4a', 'q', 'a', 'result4a')">Verificar respuesta</button>
+        <input type="radio" name="q" value="a" required> a) Recibe el nombre de hipervisor.<br>
+        <input type="radio" name="q" value="b"> +b) Recibe el nombre de anfitrión.<br>
+        <input type="radio" name="q" value="c"> c) Ninguna de las otras respuestas es correcta.<br>
+        <input type="radio" name="q" value="d"> d) Recibe el nombre de huésped.<br>
+        <button type="button" onclick="checkAnswer('quizForm4a', 'q', 'b', 'result4a')">Verificar respuesta</button>
         <span id="result4a" class="result"></span>
     </form>	
 	
 	<!-- Pregunta 5 -->
-    <h2>El PCB ( Process Control Block)...</h2>
+    <h2>¿Porque se considera una desventaja de la arquitectura de microservicios la complejidad en la gestión?</h2>
     <form id="quizForm5a">
-        <input type="radio" name="q" value="a" required> X a) Es un conjunto de datos que necesita el sistema operativo para poder administrar un proceso.<br>
-        <input type="radio" name="q" value="b"> b) Es el lugar de memoria principal reservado para cada proceso.<br>
-        <input type="radio" name="q" value="c"> c) Es el lugar dónde se realiza el cambio de proceso.<br>
+        <input type="radio" name="q" value="a" required> a) La cantidad de código necesaria para implementar los servicios y las APIs, hace dificil la gestión del sistema.<br>
+        <input type="radio" name="q" value="b"> b) La comunicación entre los microservicios dificulta la gestión.<br>
+        <input type="radio" name="q" value="c"> +c) Un gran número de microservicios distribuidos, necesita una centralización de trazabilidad y herramientas avanzadas de procesamiento de información para tener una visión general.<br>
         <input type="radio" name="q" value="d"> d) Contiene la información de todos los procesos que están en memoria principal.<br>
-        <button type="button" onclick="checkAnswer('quizForm5a', 'q', 'a', 'result5a')">Verificar respuesta</button>
+        <button type="button" onclick="checkAnswer('quizForm5a', 'q', 'c', 'result5a')">Verificar respuesta</button>
         <span id="result5a" class="result"></span>
     </form>
 	
 	<!-- Pregunta 6 -->
-    <h2>¿Qué contiene la llamada "sección de texto" dentro del espacio de memoria de un proceso?</h2>
+    <h2>Los beneficios del uso de contenedores son:</h2>
     <form id="quizForm6a">
-        <input type="radio" name="q" value="a" required> a) Contiene datos temporales (como parámetros de función, direcciones de retorno y variables locales).<br>
-        <input type="radio" name="q" value="b"> X b) Contiene el código de ejecución (instrucciones) del programa.<br>
-        <input type="radio" name="q" value="c"> c) Es el espacio de memoria asignada dinámicamente durante el tiempo de ejecución del proceso.<br>
-        <input type="radio" name="q" value="d"> d) Es la sección de datos que contiene variables globales.<br>
-		<input type="radio" name="q" value="e"> e) Es la sección que contiene el PCB (Process Control Block).<br>
-        <button type="button" onclick="checkAnswer('quizForm6a', 'q', 'b', 'result6a')">Verificar respuesta</button>
+        <input type="radio" name="q" value="a" required> a) Incremento en la eficiencia del proceso de virtualización con menor consumo de recursos.<br>
+        <input type="radio" name="q" value="b"> b) Instalación y despliegue mas simple con independencia de plataforma<br>
+        <input type="radio" name="q" value="c"> c) Mejor y mayor asilamiento y capacidad de gestión y automatización.<br>
+        <input type="radio" name="q" value="d"> d) Ninguna de las respuestas es correcta.<br>
+		<input type="radio" name="q" value="e"> +e) Todas las respuestas son las correctas.<br>
+        <button type="button" onclick="checkAnswer('quizForm6a', 'q', 'e', 'result6a')">Verificar respuesta</button>
         <span id="result6a" class="result"></span>
     </form>
 	
 	<!-- Pregunta 7 MULTI -->
-	<h2>¿Cuándo termina un proceso? ABD</h2>
+	<h2>Indique las 3 características que describen mejor a una arquitectura de microservicios:</h2>
 	<form id="quizForm7a">
-    <input type="checkbox" name="q7" value="a" required> X a) Cuando hace una llamada específica al sistema, por ejemplo exit()<br>
-    <input type="checkbox" name="q7" value="b"> X b) Cuando se genera una excepción y el sistema operativo decide abortarlo.<br>
-    <input type="checkbox" name="q7" value="c"> c) Por timeout.<br>
-    <input type="checkbox" name="q7" value="d"> X d) Cuando existe una llamada al sistema para abortar otro proceso, por ejemplo kill(), TerminateProcess()<br>
-    <input type="checkbox" name="q7" value="e"> e) Porque el proceso abandona la memoria principal.<br>
-	<input type="checkbox" name="q7" value="f"> f) Porque el necesita pasar a estado listo.<br>
+    <input type="checkbox" name="q7" value="a" required> a) Los datos entre los microservicios se transfieren exclusivamente mediante un formato XML.<br>
+    <input type="checkbox" name="q7" value="b"> +b) Debido a que se ejecutan de forma independiente, cada servicio se puede actualizar, implementar y escalar para satisfacer la demanda de funciones especificas de una aplicación.<br>
+    <input type="checkbox" name="q7" value="c"> c) Los sistemas que contienen microservicios tienen un fuerte acoplamiento del software que lo componen.<br>
+    <input type="checkbox" name="q7" value="d"> +d) Los microservicios son puestos en producción de forma separada y tienen comunicación unos con otros a través de una red previamente debida.<br>
+    <input type="checkbox" name="q7" value="e"> e) Los microservicios se encuentran enfocados en realizar una y solo una tarea, con este enfoque existe una única base de datos centralizada, y cada uno de los servicios interactúa con sus propios datos.<br>
+	<input type="checkbox" name="q7" value="f"> +f) Generalmente la comunicación de los microservicios se hace a través del protocolo HTTP mediante una arquitectura REST.<br>
  
     <button type="button" onclick="
         const checkboxes = document.querySelectorAll('input[name=\'q7\']:checked');
         const selectedValues = Array.from(checkboxes).map(checkbox => checkbox.value);
-        const correctAnswers = ['a', 'b', 'd'];
+        const correctAnswers = ['b', 'd', 'f'];
         const isCorrect = correctAnswers.every(answer => selectedValues.includes(answer));
         const resultElement = document.getElementById('result7a');
         resultElement.textContent = (isCorrect && selectedValues.length === correctAnswers.length) ? '¡Todas las respuestas correctas!' : 'Respuesta incorrecta. Intenta de nuevo.';
@@ -170,190 +237,41 @@
 	</form>
 
 	<!-- Pregunta 8 -->
-    <h2>¿En qué se diferencia un proceso bloqueado de uno en estado de ejecución?</h2>
+    <h2>Cuáles de las siguientes afirmaciones de contenedores Vs maquinas virtuales son correctas.</h2>
     <form id="quizForm8a">
-        <input type="radio" name="q" value="a" required> a) En que se alojan en distintas memorias.<br>
-        <input type="radio" name="q" value="b"> b) Por el planificador que lo gestiona.<br>
-        <input type="radio" name="q" value="c"> c) El primero no tiene Bloque de Control.<br>
-        <input type="radio" name="q" value="d"> X d) El proceso que está en ejecución esta haciendo uso de la CPU y el que está bloqueado no.<br>
+        <input type="radio" name="q" value="a" required> a) Es lo mismo técnica y funcionalmente.<br>
+        <input type="radio" name="q" value="b"> b) El flujo de trabajo es el mismo en ambas tecnologias.<br>
+        <input type="radio" name="q" value="c"> c) La arquitectura que soporta ambas tecnologías es la misma.<br>
+        <input type="radio" name="q" value="d"> +d) Ninguna de las respuestas es correcta.<br>
+        <input type="radio" name="q" value="e"> e) Todas las respuestas son correctas.<br>
         <button type="button" onclick="checkAnswer('quizForm8a', 'q', 'd', 'result8a')">Verificar respuesta</button>
         <span id="result8a" class="result"></span>
     </form>
 
 	<!-- Pregunta 9 -->
-    <h2>¿Qué función cumple el "montón" (heap) dentro del espacio de memoria de un proceso?</h2>
+    <h2>Indique cual de las siguientes definiciones corresponde a una arquitectura de microservicios</h2>
     <form id="quizForm9a">
-        <input type="radio" name="q" value="a" required> a) Contiene datos temporales (como parámetros de función, direcciones de retorno y variables locales)<br>
-        <input type="radio" name="q" value="b"> b) Contiene el código de ejecución (instrucciones) del programa.<br>
-        <input type="radio" name="q" value="c"> X c) Es el espacio de memoria asignada dinámicamente durante el tiempo de ejecución del proceso.<br>
-		<input type="radio" name="q" value="d"> d) Es la sección de datos que contiene variables globales.<br>
-		<input type="radio" name="q" value="e"> e) Es la sección conocida como "sección de texto" y contiene el código de programa.<br>
-        <button type="button" onclick="checkAnswer('quizForm9a', 'q', 'c', 'result9a')">Verificar respuesta</button>
+        <input type="radio" name="q" value="a" required> +a) Es un enfoque arquitectónico para el desarrollo de software, donde el software está compuesto por pequeños servicios independientes que se comunican entre sí a través de interfaces.<br>
+        <input type="radio" name="q" value="b"> b) Es un sistema en el cual la cantidad de recursos y del tamaño del codigo que contiene, debe mantenerse pequeña.<br>
+        <input type="radio" name="q" value="c"> c) Es un sistema que depende de la cantidad de recursos y del tamaño del código que contiene.<br>
+		<input type="radio" name="q" value="d"> d) Es todo aquel sistema para aplicaciones web que están virtualizadas.<br>
+        <button type="button" onclick="checkAnswer('quizForm9a', 'q', 'a', 'result9a')">Verificar respuesta</button>
         <span id="result9a" class="result"></span>
     </form>
-	
-		<!-- Pregunta 10 MULTI -->
-	<h2>¿Cuándo termina un proceso? ABD</h2>
-	<form id="quizForm10a">
-    <input type="checkbox" name="q10" value="a" required> X a) Porque el hijo ha excedido el uso de algunos de los recursos que ha sido asignado.<br>
-    <input type="checkbox" name="q10" value="b"> X b) Porque la tarea asignada al hijo ya no es necesaria.<br>
-    <input type="checkbox" name="q10" value="c"> c) Porque el padre pasa a estado bloqueado.<br>
-    <input type="checkbox" name="q10" value="d"> X d) Porque el padre esta terminando y el SO no permite que un hijo continúe si su padre termina.<br>
-    <input type="checkbox" name="q10" value="e"> e) Porque el padre abandona la memoria principal.<br>
-	<input type="checkbox" name="q10" value="f"> f) Porque el padre necesita pasar a estado listo.<br>
- 
-    <button type="button" onclick="
-        const checkboxes = document.querySelectorAll('input[name=\'q10\']:checked');
-        const selectedValues = Array.from(checkboxes).map(checkbox => checkbox.value);
-        const correctAnswers = ['a', 'b', 'd'];
-        const isCorrect = correctAnswers.every(answer => selectedValues.includes(answer));
-        const resultElement = document.getElementById('result10a');
-        resultElement.textContent = (isCorrect && selectedValues.length === correctAnswers.length) ? '¡Todas las respuestas correctas!' : 'Respuesta incorrecta. Intenta de nuevo.';
-    ">Verificar respuesta</button>
-    <span id="result10a" class="result"></span>
-	</form>
-	<!-- Pregunta 11 -->
-    <h2>Un proceso en estado listo (ready)</h2>
-    <form id="quizForm11a">
-        <input type="radio" name="q" value="a" required> X a) Se encuentra alojado en memoria principal.<br>
-        <input type="radio" name="q" value="b"> b) Se encuentra alojado en memoria secundaria (disco)<br>
-        <input type="radio" name="q" value="c"> c) Está en disco después de un proceso de swapping.<br>
-		<input type="radio" name="q" value="d"> d) Está a la espera de una E/S.<br>
-        <button type="button" onclick="checkAnswer('quizForm11a', 'q', 'a', 'result11a')">Verificar respuesta</button>
-        <span id="result11a" class="result"></span>
-    </form>
-	
-	<!-- Pregunta 12 -->
-    <h2>¿Qué contiene la llamada "sección de datos" dentro del espacio de memoria de un proceso?</h2>
-    <form id="quizForm12a">
-        <input type="radio" name="q" value="a" required> a) Contiene datos temporales (como parámetros de función, direcciones de retorno y variables locales)<br>
-        <input type="radio" name="q" value="b"> b) Contiene el código de ejecución (instrucciones) del programa<br>
-        <input type="radio" name="q" value="c"> c) Es el espacio de memoria asignada dinámicamente durante el tiempo de ejecución del proceso.<br>
-		<input type="radio" name="q" value="d"> X d) Es la sección de datos que contiene variables globales.<br>
-		<input type="radio" name="q" value="e"> e) Es la sección que contiene el PCB (Process Control Block)<br>
-        <button type="button" onclick="checkAnswer('quizForm12a', 'q', 'd', 'result12a')">Verificar respuesta</button>
-        <span id="result12a" class="result"></span>
-    </form>
-	
-	<h2 id="u3">Unidad 3</h2><a href="#principal" style="text-decoration:none;">VOLVER</a>
-	
-	<!-- Pregunta 1 -->
-    <h2>¿Cuál de las siguientes sentencias describe al algoritmo de planificación del proceso "con tiempo restante mas corto" (SRT-Shortest Remaining Time)?</h2>
-    <form id="quizForm1b">
-        <input type="radio" name="q" value="a" required> a) Cuando la CPU está disponible, se le asigna el proceso que tiene la siguiente ráfaga de ejecución más pequeña.<br>
-        <input type="radio" name="q" value="b"> b) El próximo proceso que tomará la CPU es el que tiene más antigüedad en la memoria principal.<br>
-        <input type="radio" name="q" value="c"> X c) El proceso que está en la CPU es desalojado si llega a la cola de listos un proceso con duración más corta.<br>
-		<input type="radio" name="q" value="d"> d) El próximo proceso que tomará la CPU es el que tiene mayor prioridad.<br>
-        <button type="button" onclick="checkAnswer('quizForm1b', 'q', 'c', 'result1b')">Verificar respuesta</button>
-        <span id="result1b" class="result"></span>
+
+    <!-- Pregunta 10 -->
+    <h2>En una maquina virtual, la capa de software denominado hipervisor</h2>
+    <form id="quizForm10a">
+        <p>En una maquina virtual, la capa de software denominado <b>hipervisor...</b></p>
+        <input type="radio" name="q" value="a" required> a) Solo se instala cuando hay más de una máquina virtual instalada en una computadora física. <br>
+        <input type="radio" name="q" value="b"> +b) Gestiona y arbitra los recursos principales de la computadora, repartiendo dinámicamente estos recursos entre todas las máquinas virtuales que se ejecutan sobre la misma computadora física.<br>
+        <input type="radio" name="q" value="c"> c) Administra el sistema anfitrión.<br>
+        <input type="radio" name="q" value="d"> d) Ninguna de las otras respuestas es correcta.<br>
+        <button type="button" onclick="checkAnswer('quizForm10a', 'q', 'b', 'result10a')">Verificar respuesta</button>
+        <span id="result10a" class="result"></span>
     </form>
 
-	<!-- Pregunta 2 -->
-    <h2>¿Qué es un sistema multiprocesador con procesadores de funcionalidad especializada?</h2>
-    <form id="quizForm2b">
-        <input type="radio" name="q" value="a" required> a) Es un sistema formado por un conjunto de procesadores que comparten la memoria principal y están bajo el control integrado de un único sistema operativo.<br>
-        <input type="radio" name="q" value="b"> b) Es un sistema formado por sistemas relativamente autónomos; donde cada procesador tiene su propia memoria principal y canales de E/S.<br>
-        <input type="radio" name="q" value="c"> X c) Es un sistema con un procesador de propósito general maestro y procesadores especializados que son controlados por el procesador maestro al cual le proporcionan servicios<br>
-		<input type="radio" name="q" value="d"> d) Es un sistema con un solo procesador que tiene una gran cantidad de procesos en estado de ejecución.<br>
-        <button type="button" onclick="checkAnswer('quizForm2b', 'q', 'c', 'result2b')">Verificar respuesta</button>
-        <span id="result2b" class="result"></span>
-    </form>
-	
-	<!-- Pregunta 3 -->
-    <h2>En los sistemas multiprocesadores, ¿a qué se denomina equilibrio de carga?</h2>
-    <form id="quizForm3b">
-        <input type="radio" name="q" value="a" required> a) A un sistema que divide la memoria uniformemente entre todas las CPU o procesadores<br>
-        <input type="radio" name="q" value="b"> b) Al sistema que asocia un procesador a una tarea de supervisión de los demás procesadores<br>
-        <input type="radio" name="q" value="c"> c) A la planificación que intenta mantener a un proceso siempre en un mismo procesador, para que aproveche los datos que puedan estar en la memoria caché de la CPU<br>
-		<input type="radio" name="q" value="d"> X d) A la planificación que tiene como objetivo mantener el trabajo de cada procesador uniformemente distribuido entre todos los procesadores<br>
-        <button type="button" onclick="checkAnswer('quizForm3b', 'q', 'd', 'result3b')">Verificar respuesta</button>
-        <span id="result3b" class="result"></span>
-    </form>
-	
-	<!-- Pregunta 4 -->
-    <h2>¿Cómo se asigna la CPU a los procesos, en una planificación basada en prioridades?</h2>
-    <form id="quizForm4b">
-        <input type="radio" name="q" value="a" required> a) Toma la CPU aquel proceso en memoria principal con mayor prioridad.<br>
-        <input type="radio" name="q" value="b"> b) Toma la CPU aquel proceso en estado de ejecución con mayor prioridad.<br>
-        <input type="radio" name="q" value="c"> c) Toma la CPU aquel proceso en estado suspendido listo con mayor prioridad.<br>
-		<input type="radio" name="q" value="d"> X d) Toma la CPU aquel proceso en estado listo (ready) con mayor prioridad.<br>
-        <button type="button" onclick="checkAnswer('quizForm4b', 'q', 'd', 'result4b')">Verificar respuesta</button>
-        <span id="result4b" class="result"></span>
-    </form>
-	
-	<!-- Pregunta 5 -->
-    <h2>¿Qué riesgo puede ocurrir con una mala planificación no expropiativa (cooperativa)?</h2>
-    <form id="quizForm5b">
-        <input type="radio" name="q" value="a" required> a) Riesgo de perder alguna solicitud de interrupción.<br>
-        <input type="radio" name="q" value="b"> X b) Riesgo de acaparamiento injusto de la CPU por parte de algún proceso.<br>
-        <input type="radio" name="q" value="c"> c) Riesgo de inconsistencia en los datos compartidos por dos o mas procesos.<br>
-		<input type="radio" name="q" value="d"> d) Riesgo de desborde de memoria principal por exceso de procesos en estado listo.<br>
-        <button type="button" onclick="checkAnswer('quizForm5b', 'q', 'b', 'result5b')">Verificar respuesta</button>
-        <span id="result5b" class="result"></span>
-    </form>
 
-	<!-- Preguntas EXTRA -->
-	
-    <h2>El ciclo de una instruccion supone dos fases : una busqueda de la instruccion ¿y la otra?</h2>
-    <form id="quizForm1c">
-        <input type="radio" name="q" value="a" required> a) Para actualizar el registro de estado de la CPU.<br>
-        <input type="radio" name="q" value="b"> X b) Para la ejecucion de la instruccion.<br>
-        <input type="radio" name="q" value="c"> c) Para la busqueda del operando<br>
-		<input type="radio" name="q" value="d"> d) Para el incremento del PC<br>
-        <button type="button" onclick="checkAnswer('quizForm1c', 'q', 'b', 'result1c')">Verificar respuesta</button>
-        <span id="result1c" class="result"></span>
-    </form>
-	
-	<h2>¿Que es un ciclo de instruccion?</h2>
-    <form id="quizForm2c">
-        <input type="radio" name="q" value="a" required> X a) Es el procesamiento de busqueda y ejecucion de las instrucciones en memoria, llevado a cabo por la CPU,durante la ejecucion de un programa.<br>
-        <input type="radio" name="q" value="b"> b) Es la forma en que se particiona un programa cuando se carga en memoria.<br>
-        <input type="radio" name="q" value="c"> c) Es el ciclo que se lleva a cabo cuando un proceso cambia de estados.<br>
-		<input type="radio" name="q" value="d"> d) Es el proceso que se lleva a cabo cuando ocurre un pedido de interrupción.<br>
-        <button type="button" onclick="checkAnswer('quizForm2c', 'q', 'a', 'result2c')">Verificar respuesta</button>
-        <span id="result2c" class="result"></span>
-    </form>
-	
-	<h2>¿Cuándo un programa pasa a ser un proceso?</h2>
-    <form id="quizForm3c">
-        <input type="radio" name="q" value="a" required> a) Cuando finaliza la ejecucion.<br>
-        <input type="radio" name="q" value="b"> X b) Cuando a traves del SO se produce la carga de un archivo ejecutable (programa) en la memoria.<br>
-        <input type="radio" name="q" value="c"> c) Cuando pasa de estado listo a estado (ready) de ejecucion.<br>
-		<input type="radio" name="q" value="d"> d) Cuando se termina el proceso de compilacion y enlazado.<br>
-        <button type="button" onclick="checkAnswer('quizForm3c', 'q', 'b', 'result3c')">Verificar respuesta</button>
-        <span id="result3c" class="result"></span>
-    </form>
-	
-	<h2>¿Que es una planificacion no expropiativa o cooperativa?</h2>
-    <form id="quizForm4c">
-        <input type="radio" name="q" value="a" required> X a) Es la planificacion que asigna un proceso a la CPU, y este se mantiene en la CPU hasta que libera, ya sea terminado o cambiando al estado de espera (ready)<br>
-        <input type="radio" name="q" value="b"> b) La planificación por la cual todos los procesos que están en memoria principal pueden tomar y liberar la CPU.<br>
-        <input type="radio" name="q" value="c"> c) La planificación que permite que un proceso tome y libere la CPU un tiempo fijo (quantum)<br>
-		<input type="radio" name="q" value="d"> d) La planificacion que asigna un proceso a la CPU y no la libera hasta que se finaliza su ejecucion.<br>
-        <button type="button" onclick="checkAnswer('quizForm4c', 'q', 'a', 'result4c')">Verificar respuesta</button>
-        <span id="result4c" class="result"></span>
-    </form>
-	
-	<h2>¿Para que se realiza la planificacion del procesador o CPU?</h2>
-    <form id="quizForm5c">
-        <input type="radio" name="q" value="a" required> a) Para planificar el intercambio de procesos entre memoria y memoria secundaria.<br>
-        <input type="radio" name="q" value="b"> X b) Para asignar tiempo de ejecucion o tiempo de CPU a los distintos procesos que estan en estado listo.<br>
-        <input type="radio" name="q" value="c"> c) Para asignar la memoria principal a los distintos procesos que estan en estado listo para su ejecucion.<br>
-		<input type="radio" name="q" value="d"> d) Para asignar los recursos de E/S a los distintos procesos que lo soliciten.<br>
-        <button type="button" onclick="checkAnswer('quizForm5c', 'q', 'b', 'result5c')">Verificar respuesta</button>
-        <span id="result5c" class="result"></span>
-    </form>
-	
-	<h2>¿Quien genera una interrupcion de programa(o interrupcion de software)?</h2>
-    <form id="quizForm5c">
-        <input type="radio" name="q" value="a" required> a) Es generada por un temporizador del procesador.<br>
-        <input type="radio" name="q" value="b"> X b) Es generada por alugna condición que se produce como resultado la ejecucion de una instruccion.<br>
-        <input type="radio" name="q" value="c"> c) Es generada por la señal externa para indicar que algún dispositivo requiere atencion.<br>
-		<input type="radio" name="q" value="d"> d) Es generada por un controlador de E/S para señalar la finalizacion normal de una operacion.<br>
-        <button type="button" onclick="checkAnswer('quizForm5c', 'q', 'b', 'result5c')">Verificar respuesta</button>
-        <span id="result5c" class="result"></span>
-    </form>
-	
     <script src="script.js"></script>
 </body>
 </html>
